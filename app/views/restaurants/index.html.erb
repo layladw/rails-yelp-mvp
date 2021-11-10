@@ -1,7 +1,11 @@
 <h1>Restaurants</h1>
-<ul>
+
   <% @restaurants.each do |restaurant| %>
-    <li class=list><%= link_to restaurant.name, restaurant_path(restaurant) %>
+  <div class="restaurant">
+    <h2> <%= link_to restaurant.name, restaurant_path(restaurant) %> </h2>
     <p> <%= restaurant.category %> </p>
+  </div>
   <% end %>
-</ul>
+
+
+<button class="btn-grey"> <%= link_to 'Add a restaurant', new_restaurant_path %></button>
